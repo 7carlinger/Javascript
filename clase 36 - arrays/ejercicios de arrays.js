@@ -1,3 +1,16 @@
+/* Crear un programa que pida ingresar números separados por espacios y devuelva un mensaje con la suma de todos los números. Ejemplo:
+//  Ingrese números: 5 7 10 12 24
+//  La suma de todos los números es: 58*/
+const input = prompt("ingresa los nros a sumar");
+const arr = input.split(' '); 
+
+let suma = 0;
+
+for(let i = 0; i < arr.length; i++) {
+    suma = suma + Number(arr[i]); 
+}
+console.log(suma);
+
 /**
  *  Crear un programa que pida ingresar nombres separados por espacios y
  * devuelva un mensaje que contenga un saludo a cada persona. Ejemplo:}
@@ -7,8 +20,13 @@
  * ¡Hola Greta!
  * ¡Hola Grace!
  * */
-
- 
+let nombres = prompt("ingresen sus nombres separados por espacios");
+const arr = nombres.split(' ');
+console.log(arr);
+for (let i = 0; i <=2; i++){
+    alert("hola "+ arr[i]+ "!");
+}
+//============================================================================================
 //02
 /**
  * Crear un programa que pida ingresar números separados por espacios y devuelva un mensaje con el menor número ingresado. Ejemplo:
@@ -16,13 +34,38 @@
  * Ingrese números: 5 7 99 34 54 2 12
  * El menor número es: 2
  */
+//Este si funciona (lo saque de clase 47)
+const input = prompt("ingrese los numeros que quiere analizar");
+const arr = input.split(' '); 
+
+const valorMasChico = (arr) => Math.min(...arr);
+valorMasChico(arr);
+
+//esto no anduvo (lo encontre en la web)
+//en clase Fede dijo que no era necesario un reduce para esto
+
+
+const Minimus = arr.reduce (function min(arr) {
+  return Math.min(arr);
+  
+});
+console.log(Minimus);
+
+//este siiiiii funciona. Array de nros del que se obtiene el menor 
+//(pero no entiendo toda la sintaxis)🤔
+const input = prompt("ingrese los numeros que quiere analizar");
+const arr = input.split(' '); 
+
+console.log(Math.min.apply(Math, arr));
+
+//=============================================================================================
 
  // 03
- /**
-  * Crear un programa que pida ingresar números separados por espacios y devuelva un mensaje con la suma de todos los números. Ejemplo:
+ /* Crear un programa que pida ingresar números separados por espacios y devuelva un mensaje con la suma de todos los números. Ejemplo:
   * Ingrese números: 5 7 10 12 24
   * La suma de todos los números es: 58
   */
+
 
   // 04
 /**
@@ -48,21 +91,6 @@
   * Ingresar nombres: Sam Orco Frodo
   * Sam y Frodo están separados, ¡Frodo está en peligro!
   */
-
- const nombres = prompt (" Ingrese participantes del senor de los anillos separados por espacios");
- const arr= nombres.split(" ") ;
- console.log (arr);
- const posicionSam = arr.indexOf("sam");
-
- 
- const posicionFrodo = arr.indexOf("frodo");
-
- console.log(posicionSam , posicionFrodo);
- if (posicionSam == (posicionFrodo+1) || posicionFrodo == (posicionSam+1)){
-     alert("Sam y Frodo están juntos, ¡Frodo está a salvo!");
- } else {
-   alert("frodo is in danger!")
- }
 
 // 07
 /**
@@ -140,3 +168,4 @@
     *
     * El array invertido es: [12, 2, 54, 34, 99, 7, 5]
     */
+   

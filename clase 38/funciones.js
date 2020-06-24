@@ -30,14 +30,14 @@ saludo();
  * por prompt y mostrnadolo por alert.
  * 
  ***********************************************/
-const cuad = () => { 
+const cuadrado = () => { 
     let num = number(prompt("Ingrese un número"));
     alert(`Hola ${num}`);
     num = num * num
 }
-cuad();
+cuadrado();
 
-//otra
+//otra: haciendo la operacion adentro del alert
 const cuad = () => {
     let num = Number(prompt(`Ingrese el valor a elevar:`));
     //num = 6
