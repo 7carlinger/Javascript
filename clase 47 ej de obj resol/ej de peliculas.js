@@ -52,6 +52,10 @@ const contenedorDePeliculas = () => {
 return misPeliculas;
 
 }
+//para que funcione...instanciar
+const peliculasDeCarla = contenedorDePeliculas();
+peliculasDeCarla.agregar('batman', 'milipili', '1999', 'triller', 'vista');
+
 
 
 
