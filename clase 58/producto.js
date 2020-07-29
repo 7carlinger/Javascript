@@ -151,3 +151,7 @@ class Auriculares extends Producto {
     console.log("Eligió auriculares no-wireless")
     }
 }
+
+
+
+
