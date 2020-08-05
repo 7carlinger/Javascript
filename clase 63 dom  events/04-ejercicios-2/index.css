@@ -1,0 +1,9 @@
+input {
+    width: 260px;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+};
+.focused{
+    border: outset 10px crimson;
+};
