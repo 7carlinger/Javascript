@@ -4,28 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Restaurant</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body onload="loadEvents()">
-    <section class="mesas">
+    <section class="mesas mainSection">
         <header>
-            <span>Mesas</span> 
+            <h1>Mesas</h1> 
         </header>
      
-        <section id="class">
+        <section id="tabla-mesas" class="tabla">
             <table>
                 <thead>
-                  <th id="t-mesa">Mesa</td>
-                  <th id="t-cuenta">Cuenta</td>
-                  <th id="t-cerrarmesa">Cerrar mesa</td>
+                  <th id="t-mesa">Mesa</th>
+                  <th id="t-cuenta">Cuenta</th>
+                  <th id="t-cerrarmesa">Cerrar mesa</th>
                 </thead>
-                <tbody id="tabla-mesas">
-                   //tr con td q se agregan programaticamente  
+                <tbody>
+                   <tr>
+                    <td>1</td>
+                    <td>$500</td>
+                    <td><button>Cerrar</button></td>
+                   </tr> 
+                   <tr>
+                    <td>2</td>
+                    <td>$300</td>
+                    <td><button>Cerrar</button></td>
+                   </tr>
+                   <tr>
+                    <td>3</td>
+                    <td>$0</td>
+                    <td><button>Cerrar</button></td>
+                   </tr>  
                 </tbody>    
             </table>
-            <input id="nro-mesa" type="text" placeholder="numero de mesa">
-            <button id="boton-agregar-mesa">Agregar Mesa</button>
+            <div class="input-agregar">
+              <input id="nro-mesa" type="text" placeholder="Número de mesa">
+              <button id="boton-agregar-mesa">Agregar Mesa</button>
+            </div>
         </section>
     </section>
+  <section class="productos mainSection">
+        <header>
+            <h1>Productos</h1> 
+        </header>
+     
+        <section id="tabla-productos" class="tabla">
+            <table>
+                <thead>
+                  <th id="t-id">Id</th>
+                  <th id="t-producto">Producto</th>
+                  <th id="t-precio">Precio</th>
+                  <th id="t-eliminarProd">Eliminar</th>
+                </thead>
+                <tbody>
+                   <tr>
+                    <td>01</td>                    
+                    <td>Café</td>
+                    <td>$110</td>
+                    <td><button>Eliminar</button></td>
+                   </tr> 
+                   <tr>
+                    <td>02</td>
+                    <td>Medialuna</td>
+                    <td>$75</td>
+                    <td><button>Eliminar</button></td>
+                   </tr>
+                   <tr>
+                    <td>03</td> 
+                    <td>Jugo de Naranja</td>
+                    <td>$95</td>
+                    <td><button>Eliminar</button></td>
+                   </tr>  
+                </tbody>    
+            </table>
+            <div class="input-agregar">
+              <input id="inputProducto" type="text" placeholder="Nuevo producto">
+              <input id="precioProducto" type="text" placeholder ="Precio"> 
+              <button id="boton-agregar-producto">Agregar Producto</button>
+            </div>
+        </section>
+    </section>
+  
+  
+  
+  
+    <script type="text/javascript" src="clases.js"></script>
     <script type="text/javascript" src="index.js"></script>
+    
 </body>
 </html>

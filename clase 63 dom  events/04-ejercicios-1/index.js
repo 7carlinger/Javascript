@@ -17,22 +17,33 @@ const addTodo = () => {
     const checkbox = document.createElement("input")
     checkbox.type = "checkbox";
     const deletebutton = document.createElement("button");
-    deletebutton.type = "button";
-    deletebutton.createTextNode = "eliminar";
-    if (tarea === "") throw new Error ('No inrgesaste ninguna tarea');
+    const textDeleteButton = document.createTextNode("eliminar");
+    if (tarea === "") throw new Error ('No ingresaste ninguna tarea');
     span.innerText = tarea;
+
+     
+    document.querySelector("input").value = "";//pone vacio el input
     
-    document.querySelector("input").value = "";
     li.appendChild(deletebutton);
     li.appendChild(checkbox);
     li.appendChild(span);
+    deletebutton.appendChild(textDeleteButton);
     
     document.querySelector("ul").appendChild(li);  
-    
+
+    const deleteTodo = (e) => {
+        e.target.parentElement.remove();
+    }
+
+    deletebutton.addEventListener("click", (e) => deleteTodo(e));
 };
+
+
 
 const load = () => {
     const button = document.querySelector("button");
     button.addEventListener("click", addTodo);
+    
+
     
 };

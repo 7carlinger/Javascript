@@ -24,23 +24,52 @@
   * Por ultimo, puede hacerse con objetos o con clases.
   */
 
-const agregarMesa = event => {
-    const input = document.querySelector("#nro-mesa").value;
-    const tr = document.createElement("tr");
-    const td = document.createElement("td");
-    const botonCerrar = document.createElement("button");
-    const tbody = document.querySelector("#tabla-mesas");    
-    tbody.appendChild(tr);
-    tr.appendChild(td);
-    tr.children[0].value=input;
-    
+ const listaMesas = []; //Probamos esta const acá a ver si era eso lo que no la hacía accesible
 
-}
-  
-
-const loadEvents = () => {
-    const buttonAdd = document.querySelector("#boton-agregar-mesa");
-    buttonAdd.addEventListener("click", agregarMesa);
-}
-
+ //---Chicas dice Fede que esto lo va a explicar el martes o jueves el por qué no se unen bien
+ 
+ const agregarMesa = event => {
+   const input = document.querySelector("#nro-mesa").value;
+   const mesa = new Mesa(input); //que onda que no reconoce las clases del otro archivo clases.js
+   
+   //this.listaMesas.push(mesa);
+   const table = document.querySelector("table");
+   const tr = document.createElement("tr");
+   const tdMesa = document.createElement("td");
+   const tdCuenta = document.createElement("td");
+   const tdCerrar = document.createElement("td");
+   const botonCerrar = document.createElement("button"); 
+   const textBoton = document.createTextNode("Cerrar");
+   const textTdCuenta = document.createTextNode("$0");
+   
+   table.appendChild(tr);
+   tr.appendChild(tdMesa);
+   tr.appendChild(tdCuenta);
+   tr.appendChild(tdCerrar);
+   tdCerrar.appendChild(botonCerrar);
+   botonCerrar.appendChild(textBoton);
+   tdCuenta.appendChild(textTdCuenta);
+   
+   
+   tdMesa.textContent = input;
+   
+   document.querySelector("input").value = "";
+ 
+ }
+ 
+ /*Const agregarProducto = event () => {
+   //codigo de agreggar producto
+ }*/
+ 
+ const loadEvents = () => {
+   const buttonAdd = document.querySelector("#boton-agregar-mesa");
+   buttonAdd.addEventListener("click", agregarMesa);
+ //   const buttonAddProd = document.querySelector("#boton-agregar-producto");
+ //   buttonAddProd.addEventListener(); 
+     
+ }
+ 
+ ///////----Mi idea del tema de constructor / clases
+ // Lo de crear un objeto me parece bien
+ // Lo de que la lista sea dentro de mesas creo que no, porque la lista de mesas es una sola, no una por mesa
 

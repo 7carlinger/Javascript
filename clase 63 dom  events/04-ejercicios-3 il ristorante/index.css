@@ -1,0 +1,112 @@
+body {  
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .mainSection {
+      border: 1px solid #337AB7;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 25px;
+      
+  }
+  
+  .mainSection header {
+      background-color: #337AB7;
+      margin: 0;
+      width: 100%;
+      height: 35px;
+      border-top: 5px;
+      color: white;
+  
+  }
+  
+  .mainSection header h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 15px;
+    padding-top: 7px;
+    
+    
+  
+  }
+  
+  .tabla{
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0;
+  }
+  
+  th{
+    border-bottom: 2px solid #e2e2e2;
+    padding-bottom: 3px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  td{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #e2e2e2;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    color: #444;
+  }
+  td button{
+    font-family: 'Roboto', sans-serif;
+    background-color: #5DB85C;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+  }
+  
+  .input-agregar {
+    padding: 15px;
+    
+    
+    
+  }
+  .input-agregar button{
+    background-color: #337AB7;
+    color: white;
+    border: none;
+    border-radius:5px;
+    padding: 8px 10px;
+    margin-left: 5px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .input-agregar input{
+    padding: 8px;
+    margin-right: 5px;
+    border: solid 1px #e2e2e2;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+  }
+  #tabla-productos td:nth-child(2){
+    text-align: left;
+    
+  }
+  #tabla-productos th:nth-child(2){
+    text-align: left;
+  }
+  #precioProducto{
+    width: 70px;
+    margin-left: 5px;
+  }
+  #boton-agregar-producto{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
